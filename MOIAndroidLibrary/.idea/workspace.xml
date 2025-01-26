@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d009bc32-04bd-471e-a480-ff316bd5d909" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/abugamess/moiandroidlibrary/GeneralResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/abugamess/moiandroidlibrary/IMiniAppData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jitpack.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../jitpack.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abugamess/moiandroidlibrary/IMiniApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abugamess/moiandroidlibrary/IMiniApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/abugamess/superapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/abugamess/superapp/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/abugamess/superapp/MiniAppRegistry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/abugamess/superapp/MiniAppRegistry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

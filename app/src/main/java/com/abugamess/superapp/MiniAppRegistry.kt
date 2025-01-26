@@ -1,5 +1,7 @@
 package com.abugamess.superapp
 
+import com.abugamess.moiandroidlibrary.IMiniApp
+
 object MiniAppRegistry {
     private val miniApps = mutableMapOf<String, IMiniApp>()
 

@@ -9,7 +9,6 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -17,11 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
-rootProject.name = "Super App"
-include ':app'
-include ':MOIAndroidLibrary'
-include ':MiniApp'
+rootProject.name = "Mini App"
+include(":app")
+ 
