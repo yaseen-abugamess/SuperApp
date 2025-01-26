@@ -22,6 +22,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Super App"
 include ':app'
-include ':MiniApp'
-include ':samplemodule'
 include ':MOIAndroidLibrary'
