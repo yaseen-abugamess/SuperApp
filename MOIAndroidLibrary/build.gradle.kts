@@ -34,18 +34,6 @@ android {
     }
 }
 
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            afterEvaluate{
-//                from(components["release"])
-//                groupId = "com.moilibaray"
-//                artifactId = "moiLibaray"
-//                version = "1.0.0"
-//            }
-//        }
-//    }
-//}
 
 publishing {
     publications {
@@ -63,6 +51,7 @@ publishing {
         mavenLocal()
     }
 }
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
