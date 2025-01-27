@@ -18,7 +18,12 @@ import com.abugamess.moiandroidlibrary.IMiniAppData
 
 import com.abugamess.superapp.ui.theme.SuperAppTheme
 
-  class MiniData: IMiniAppData {
+  class MiniData constructor(
+     val perms: List<Permissions>
+  ): IMiniAppData {
+
+
+
     override fun getIsEmployee(): GeneralResponse<Boolean>? {
         return GeneralResponse(true, null, true)
     }
@@ -31,6 +36,9 @@ import com.abugamess.superapp.ui.theme.SuperAppTheme
         return GeneralResponse(true, null, "Super User")
     }
 
+      fun openCamera() {
+
+      }
 }
 
 class MainActivity : ComponentActivity() {
@@ -46,7 +54,10 @@ class MainActivity : ComponentActivity() {
 
 
                 Button(onClick = {
-                    MiniAppRegistry.getMiniApp("miniapp1")?.launch(context = this@MainActivity , MiniData())
+                    MiniAppRegistry.getMiniApp("miniapp1")?.launch(
+                        context = this@MainActivity ,
+                        MiniData(perms = listOf(Permissions.CAMERA))
+                    )
                 },  modifier = Modifier.padding(innerPadding)) {
                     Greeting(
                         name = "Goto Mini App",

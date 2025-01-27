@@ -9,6 +9,10 @@ object MiniAppRegistry {
         miniApps[key] = miniApp
     }
 
+    fun unRegister(key: String) {
+        miniApps.remove(key)
+    }
+
     fun getMiniApp(key: String): IMiniApp? {
         return miniApps[key]
     }

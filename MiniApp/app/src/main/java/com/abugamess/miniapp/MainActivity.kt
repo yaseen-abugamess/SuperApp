@@ -1,6 +1,5 @@
 package com.abugamess.miniapp
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.abugamess.miniapp.MiniApp.Companion.superData
 import com.abugamess.miniapp.ui.theme.MiniAppTheme
 import com.abugamess.moiandroidlibrary.GeneralResponse
 import com.abugamess.moiandroidlibrary.IMiniAppData
@@ -33,19 +33,17 @@ class MiniData: IMiniAppData{
 
 class MainActivity : ComponentActivity() {
 
-    private var superData: IMiniAppData? = MiniData()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val miniAppData: IMiniAppData? = savedInstanceState?.getParcelable("test")
-        superData = miniAppData
         enableEdgeToEdge()
         setContent {
             MiniAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name =  "",
+                        name = superData?.getUserName()?.data ?: "",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
