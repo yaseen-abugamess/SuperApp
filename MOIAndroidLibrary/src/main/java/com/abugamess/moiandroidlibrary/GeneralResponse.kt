@@ -1,7 +1,7 @@
 package com.abugamess.moiandroidlibrary
 
 data class GeneralResponse<T>(
-    private val isSuccess: Boolean,
-    private val message: String? =null,
-    private val data: T?
+     val isSuccess: Boolean,
+     val message: String? =null,
+     val data: T?
 )

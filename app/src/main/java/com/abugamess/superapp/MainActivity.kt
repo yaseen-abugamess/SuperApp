@@ -12,15 +12,32 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.abugamess.miniapp.MiniApp
+import com.abugamess.moiandroidlibrary.GeneralResponse
+import com.abugamess.moiandroidlibrary.IMiniAppData
 
 import com.abugamess.superapp.ui.theme.SuperAppTheme
 
+  class MiniData: IMiniAppData {
+    override fun getIsEmployee(): GeneralResponse<Boolean>? {
+        return GeneralResponse(true, null, true)
+    }
+
+    override fun getUserEmail(): GeneralResponse<String>? {
+        return GeneralResponse(true, null, "Super email")
+    }
+
+    override fun getUserName(): GeneralResponse<String>? {
+        return GeneralResponse(true, null, "Super User")
+    }
+
+}
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        MiniAppRegistry.register("miniapp1", MicroApp())
+        MiniAppRegistry.register("miniapp1", MiniApp())
 
         enableEdgeToEdge()
         setContent {
@@ -29,7 +46,7 @@ class MainActivity : ComponentActivity() {
 
 
                 Button(onClick = {
-                    MiniAppRegistry.getMiniApp("miniapp1")?.launch(context = this@MainActivity)
+                    MiniAppRegistry.getMiniApp("miniapp1")?.launch(context = this@MainActivity , MiniData())
                 },  modifier = Modifier.padding(innerPadding)) {
                     Greeting(
                         name = "Goto Mini App",
